@@ -1,7 +1,7 @@
 from setuptools import setup
 setup(
   name = 'docker-ipsec',
-  version = '0.4.1',
+  version = '0.4.2',
   description = 'Scripts to start/stop ipsec VPN tunnels while adding/removing iptables rules for docker networking.',
   author = 'Christopher Brichford',
   author_email = 'chrisb@farmersbusinessnetwork.com',
@@ -17,7 +17,7 @@ setup(
     'Topic :: System :: Networking'
   ],
   scripts=['docker_ipsec/docker-ipsec.py'],
-  install_requires=['pyroute2', 'netaddr', 'python-iptables', 'ipsecparse'],
+  install_requires=['pyroute2', 'netaddr', 'python-iptables>=0.12', 'ipsecparse'],
   url='https://github.com/cbrichford/docker-ipsec/',
   packages=[
         'docker_ipsec'
